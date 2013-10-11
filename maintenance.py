@@ -23,3 +23,22 @@ class maintenance_asset(osv.Model):
 maintenance_asset()
 
 
+class maintenance_service_type(osv.Model):
+    _name = 'maintenance.service.type'
+    _columns = {
+        'name': fields.char('Name', required=True),
+    }
+    
+maintenance_service_type()
+
+class maintenance_service(osv.Model):
+
+    _name = 'maintenance.service'
+    _columns = {
+        'order_id' : fields.many2one('maintenance.order', 'Order', required=True),
+        'service_type_id': fields.many2one('maintenance.service.type', 'Type', required=True),
+        'finish_date': fields.date('Finish Date'),
+        'notes': fields.text('Notes'),
+    }
+    
+maintenance_service()
