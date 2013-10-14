@@ -42,3 +42,25 @@ class maintenance_service(osv.Model):
     }
     
 maintenance_service()
+
+
+class maintenance_order(osv.Model):
+
+    _name = 'maintenance.order'
+    _columns = {
+        'applicant_id' : fields.many2one('hr.employee', 'Applicant'),
+        'beneficiary_id' : fields.many2one('hr.department', 'Beneficiary'),
+        'description' : fields.text('Description'),
+        'asset_id' : fields.many2one('maintenance.asset', 'Asset'),
+        'employee_id' : fields.many2one('hr.employee', 'Assigned Employee'),
+        'start_date': fields.date('Start Date', required=True),
+        'finish_date': fields.date('Finish Date', required=False),
+        
+    }
+
+    _defaults = {
+        'start_date': fields.date.context_today,
+    }
+
+
+maintenance_order()
