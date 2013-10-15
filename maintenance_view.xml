@@ -1,1 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="maintenance_asset_tree_view">
+            <field name="name">maintenance.asset.tree</field>
+            <field name="model">maintenance.asset</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="asset">
+                    <field name="serial_number"/>
+                    <field name="employee_id"/>
+                    <field name="asset_type_id"/>
+                    <field name="acquisition_date" />
+                    <field name="location"/>
+                    <field name="value"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="maintenance_asset_form_view">
+            <field name="name">maintenance.asset.form</field>
+            <field name="model">maintenance.asset</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="asset" version="7.0">
+                    <group>
+                        <field name="serial_number"/>
+                        <field name="employee_id"/>
+                        <field name="asset_type_id"/>
+                        <field name="acquisition_date" />
+                        <field name="location"/>
+                        <field name="value"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="action_maintenance_asset_form">
+            <field name="name">Assets</field>
+            <field name="res_model">maintenance.asset</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        
+        
+        <record model="ir.ui.view" id="maintenance_order_tree_view">
+            <field name="name">maintenance.order.tree</field>
+            <field name="model">maintenance.order</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Orders">
+                    <field name="applicant_id"/>
+                    <field name="beneficiary_id"/>
+                    <field name="asset_id"/>
+                    <field name="start_date" />
+                    <field name="finish_date"/>
+                    <field name="employee_id"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="maintenance_order_form_view">
+            <field name="name">maintenance.order.form</field>
+            <field name="model">maintenance.order</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Orders" version="7.0">
+                    <group>
+                        <field name="applicant_id"/>
+                        <field name="beneficiary_id"/>
+                        <field name="asset_id"/>
+                        <field name="start_date" />
+                        <field name="finish_date"/>
+                        <field name="employee_id"/>
+                        <field name="description"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="action_maintenance_order_form">
+            <field name="name">Orders</field>
+            <field name="res_model">maintenance.order</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        
+        
+    </data>
+</openerp>
