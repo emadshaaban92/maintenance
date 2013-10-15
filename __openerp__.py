@@ -15,7 +15,9 @@ Bla Bla Bla
         'board',
         'hr',
     ],
-
+    'data' : [
+        'maintenance_view.xml',
+    ],
     
     'installable' : True,
     'application' : True,
