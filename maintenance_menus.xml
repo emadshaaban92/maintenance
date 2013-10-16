@@ -10,5 +10,14 @@
         
         <menuitem name="Orders" parent="maintenance_manag_menu" id="maintenance_order_menu" action="action_maintenance_order_form"/>
 
+        <!-- Configuration Menus
+        -->
+        <menuitem name="Configuration" parent="maintenance_main_menu" id="maintenance_conf_menu" />
+        
+        <menuitem name="Service Types" parent="maintenance_conf_menu" id="maintenance_service_type_menu" action="action_maintenance_service_type_form"/>
+
+        <menuitem name="Asset Types" parent="maintenance_conf_menu" id="maintenance_asset_type_menu" action="action_maintenance_asset_type_form"/>
+
+
     </data>
 </openerp>
