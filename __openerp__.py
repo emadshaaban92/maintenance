@@ -17,6 +17,7 @@ Bla Bla Bla
     ],
     'data' : [
         'maintenance_view.xml',
+        'maintenance_menus.xml',
     ],
     
     'installable' : True,
