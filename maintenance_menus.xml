@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <menuitem name="Maintenance" id="maintenance_main_menu"/>
+        
+        <menuitem name="Management" parent="maintenance_main_menu" id="maintenance_manag_menu"/>
+        
+        <menuitem name="Assets" parent="maintenance_manag_menu" id="maintenance_asset_menu" action="action_maintenance_asset_form"/>
+        
+        <menuitem name="Orders" parent="maintenance_manag_menu" id="maintenance_order_menu" action="action_maintenance_order_form"/>
+
+    </data>
+</openerp>
