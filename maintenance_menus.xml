@@ -12,7 +12,7 @@
 
         <!-- Configuration Menus
         -->
-        <menuitem name="Configuration" parent="maintenance_main_menu" id="maintenance_conf_menu" />
+        <menuitem name="Configuration" parent="maintenance_main_menu" id="maintenance_conf_menu"/>
         
         <menuitem name="Service Types" parent="maintenance_conf_menu" id="maintenance_service_type_menu" action="action_maintenance_service_type_form"/>
 

@@ -17,7 +17,7 @@ class maintenance_asset(osv.Model):
         'employee_id': fields.many2one('hr.employee', 'Employee', help='Employee who has this machine'),
         'acquisition_date': fields.date('Acquisition Date', help='Date when the asset has been bought'),
         'location': fields.char('Location', size=128, help='Location of the asset'),
-        'value': fields.float('asset Value', help='Value of the bought asset'),
+        'value': fields.float('Asset Value', help='Value of the bought asset'),
         }
         
 maintenance_asset()
@@ -48,9 +48,9 @@ class maintenance_order(osv.Model):
 
     _name = 'maintenance.order'
     _columns = {
-        'applicant_id' : fields.many2one('hr.employee', 'Applicant'),
-        'beneficiary_id' : fields.many2one('hr.department', 'Beneficiary'),
-        'description' : fields.text('Description'),
+        'applicant_id' : fields.many2one('hr.employee', 'Applicant', required=True),
+        'beneficiary_id' : fields.many2one('hr.department', 'Beneficiary', required=True),
+        'description' : fields.text('Description', required=True),
         'asset_id' : fields.many2one('maintenance.asset', 'Asset'),
         'employee_id' : fields.many2one('hr.employee', 'Assigned Employee'),
         'start_date': fields.date('Start Date', required=True),

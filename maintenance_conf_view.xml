@@ -32,10 +32,7 @@
             <field name="view_mode">tree,form</field>
 		</record>
 		
-		<menuitem name="Configuration" parent="maintenance_main_menu" id="maintenance_conf_menu" groups="maintenance.group_supervisor" />
-		<menuitem name="Service Types" parent="maintenance_conf_menu" id="maintenance_service_type_menu" action="action_maintenance_service_type_form"/>
-
-
+		
 
 		<record model="ir.ui.view" id="maintenance_asset_type_tree_view">
 			<field name="name">maintenance.asset.type.tree</field>
@@ -68,8 +65,7 @@
             <field name="view_mode">tree,form</field>
 		</record>
 		
-		<menuitem name="Asset Types" parent="maintenance_conf_menu" id="maintenance_asset_type_menu" action="action_maintenance_asset_type_form"/>
-
+		
 
 	</data>
 </openerp>
